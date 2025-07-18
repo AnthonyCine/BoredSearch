@@ -245,7 +245,7 @@ class UserManagement(APIView):
     def get(self, request, dev_code):
         users_found = []
         users = Users.objects.all()
-        if dev_code == 'accesscodedevusercine@discoverlogsllc305':
+        if dev_code == 'CREATE DEV CODE FOR ACCESS':
             for all_users in users:
                 user = {
                     'id': all_users.pk,
@@ -481,8 +481,7 @@ class BoredSearchFeed(APIView):
                     if content not in found_contents:
                         found_contents.append(content)
             requested_contents = found_contents[0:result_amount]
-            # {'exclusion': exclusion, 'interests': interests, 'search_type': search_type, 'result_amount': result_amount,
-            #  'safe': safe}
+        
         return requested_contents
 
 
@@ -511,10 +510,7 @@ class BoredSearchFeed(APIView):
                     'thumbnail': content['thumbnail'],
                     'removed': exclusion
                 }
-                # if interests != 'random':
-                #     if len(interests) > 0:
-                #         if content['main_keyword'].lower() not in interests:
-                #             data['related'] = random.choice(interests)
+                
                 if count in limit:
                     display_contents.append({"id": f"AD{count}", "search_type": "AD"})
                 display_contents.append(data)
