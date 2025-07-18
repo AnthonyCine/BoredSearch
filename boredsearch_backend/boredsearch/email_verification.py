@@ -1,7 +1,7 @@
 from django.core.mail import send_mail
 
-BOREDEMAIL = 'noreply@boredsearch.com'
-VERIFICATIONURL = 'https://boredsearch.com/verification/'
+BOREDEMAIL = 'noreply@ADD_DOMAIN.com'
+VERIFICATIONURL = 'https://DOMAIN/verification'
 
 class EmailVerify:
 
