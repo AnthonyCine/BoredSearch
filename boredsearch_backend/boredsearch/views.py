@@ -95,21 +95,21 @@ class DevUpload(APIView):
         return results
 
     def post(self, request, dev_code):
-        if dev_code == 'accesscodedevusercine@discoverlogsllc305':
+        if dev_code == 'CREATE DEV CODE FOR ACCESS':
             data = JSONParser().parse(request)
             saves = self.dev_upload(data)
             return JsonResponse(saves, status=200)
         return Response(status=400)
 
     def delete(self, request, dev_code):
-        if dev_code == 'accesscodedevusercine@discoverlogsllc305':
+        if dev_code == 'CREATE DEV CODE FOR ACCESS':
             all_contents = Contents.objects.all()
             all_contents.delete()
             return Response(status=200)
         return Response(status=400)
 
     def get(self, request, dev_code):
-        if dev_code == 'accesscodedevusercine@discoverlogsllc305':
+        if dev_code == 'CREATE DEV CODE FOR ACCESS':
             all_contents_count = Contents.objects.all()
             youtube_contents_count = Contents.objects.all().filter(search_type='video')
             web_contents_count = Contents.objects.all().filter(search_type='web')
