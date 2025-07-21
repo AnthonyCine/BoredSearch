@@ -631,7 +631,7 @@ const NewTopicsFeed = props => {
     )
 };
 
-
+//display google admob ads
 const AdView = props => {
     const [adInterests, setAdinterests] = useState([]);
     const adUnitId = "Google AdMob unit ID"
